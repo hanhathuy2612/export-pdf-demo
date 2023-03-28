@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <style>
+        .table-pdf {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+<img th:src="${imageData}" alt="dwdwdwdwdwdw" src=""/>
+
+<br/>
+<table class="table-pdf" border="1">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item: ${users}">
+        <td th:text="${item.getName()}"></td>
+        <td th:text="${item.getEmail()}"></td>
+        <td th:text="${item.getPhone()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
